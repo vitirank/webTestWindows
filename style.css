@@ -19,7 +19,7 @@ h2 {
 	font-weight: bold;
 	font-size: 36px;
 	text-transform: uppercase;
-	font-family: Roboto;
+	font-family: Cuprum;
 }
 
 .content {
@@ -218,6 +218,12 @@ a:link {
 	display: flex;
 	margin-top: -90px;
 	flex: 1;
+	position: relative;
+}
+
+.window-girl-img {
+	position: relative;
+	display: block;
 }
 
 .window-girl-img::before {
@@ -302,16 +308,57 @@ a:link {
 }
 
 .video h4 {
-  width: 370px;
+
   font-family: Roboto;
   font-size: 16px;
   font-weight: bold;
 }
 .video p {
-  width: 370px;
   font-family: Roboto;
   font-size: 14px;
 }
+
+.video-item {    
+	position: relative;
+	flex: 30%;
+}
+
+.play {
+	height: 50px;
+	width: 50px;
+	background: #43aa26;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 212px;
+    position: absolute;
+}
+
+.play:hover {
+	background: white;
+}
+
+.play-button {
+	border: 0;
+  	background: transparent;
+  	box-sizing: border-box;
+  	width: 0;
+  	height: 20px;
+	border-color: transparent transparent transparent white;
+  	transition: 100ms all ease;
+  	cursor: pointer; 
+  	border-style: solid;
+  	border-width: 10px 0 10px 18px;
+}
+
+ .play-button:hover {
+    border-color: transparent transparent transparent #43aa26;
+  }
+
+ .video-text {
+ 	width: 78%;
+ 	margin-left: 60px;
+ }
 
 .bar {
 	border: 1px solid #43aa26;
@@ -363,7 +410,7 @@ a:link {
 
 .day {
 	background: white;
-	height: 100px;
+	height: 109px;
 	width: 85px;
 	text-align: center;
 	margin-right: 20px;
@@ -371,7 +418,7 @@ a:link {
 
 .hour {
 	background: white;
-	height: 100px;
+	height: 109px;
 	width: 85px;
 	text-align: center;
 	margin-right: 20px;
@@ -379,7 +426,7 @@ a:link {
 
 .minute {
 	background: white;
-	height: 100px;
+	height: 109px;
 	width: 85px;
 	text-align: center;
 	margin-right: 20px;
@@ -387,7 +434,7 @@ a:link {
 
 .second {
 	background: white;
-	height: 100px;
+	height: 109px;
 	width: 85px;
 	text-align: center;
 }
@@ -409,11 +456,9 @@ a:link {
 
 .windows-catalog h2 {
 	display: flex;
-	font-family: Cuprum;
-	font-weight: bold;
-	font-size: 36px;
-	text-transform: uppercase;
 	align-items: center;
+	margin-bottom: 40px;
+	margin-top: 40px;
 }
 
 .catalog-nav {
@@ -423,7 +468,7 @@ a:link {
 	clear: both;
 	overflow: hidden;
 	background: #ffffff;
-	height: 42px;
+	height: 49px;
 	width: 625px;
 	padding: 10px 0;
 	margin: 0 auto;
@@ -441,7 +486,9 @@ a:link {
     background-color: white;
     color: #3da522;
     border: 3px solid #3da522;
-
+}
+.catalog-nav>li>a {
+    padding: 12px 15px 11px;
 }
 
 
