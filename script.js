@@ -34,3 +34,41 @@ function timeBetweenDates(toDate) {
     $("#seconds").text(seconds);
   }
 }
+
+
+
+// - - - - - - - - - - - - - - - - -
+var carusel = $('#windowsPics');
+var caruselLeft = $('#leftArrow');
+var caruselRight = $('#rightArrow');
+var currentPosition = 0;
+var currentSlide = 1;
+var slidesTotal = 6;
+var delta = 302;
+var caruselWidth = slidesTotal * delta;
+
+function animateCarusel(to) {
+  carusel.animate({'right': to + 'px'}, 500);
+}
+
+function goLeft() {
+  var newPosition = currentPosition + delta;
+  if (newPosition <= caruselWidth) {
+    animateCarusel(newPosition);
+    currentPosition = newPosition;
+  }
+}
+
+function goRight() {
+  var newPosition = currentPosition - delta;
+  if (newPosition < 0) {
+    newPosition = 0
+  }
+  animateCarusel(newPosition);
+  currentPosition = newPosition;
+}
+
+
+
+caruselLeft.on('click', goLeft);
+caruselRight.on('click', goRight);
